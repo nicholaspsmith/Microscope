@@ -4,7 +4,8 @@ Template.postSubmit.events({
 
     var post = {
       url: $(e.target).find('[name=url]').val(),
-      title: $(e.target).find('[name=title]').val()
+      title: $(e.target).find('[name=title]').val(),
+      user: Meteor.user()
     };
 
     post._id = Posts.insert(post);
