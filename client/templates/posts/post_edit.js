@@ -11,7 +11,7 @@ Template.postEdit.events({
     // check out how they set multiple properties at once!
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
       if (error) {
-        alert(error.reason);
+        throwError(error.reason);
       } else {
         Router.go('postPage', {_id: currentPostId});
       }
@@ -24,7 +24,7 @@ Template.postEdit.events({
     if (confirm("Delete this post?")) {
       var currentPostId = this._id;
       Posts.remove(currentPostId, function(error) {
-        alert(error.reason);
+        throwError(error.reason);
       });
       Router.go('postsList');
     }
