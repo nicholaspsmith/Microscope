@@ -158,3 +158,11 @@ body {
   margin-bottom: 5px;
   pointer-events: auto;
 }
+
+.comments {
+  padding-left: 0;
+}
+
+textarea {
+  resize: none;
+}
