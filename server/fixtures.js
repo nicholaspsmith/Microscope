@@ -55,7 +55,7 @@ if (Posts.find().count() === 0) {
     commentsCount: 0
   });
 
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 12; i++) {
     Posts.insert({
       title: 'Test post #' + i,
       author: sacha.profile.name,
