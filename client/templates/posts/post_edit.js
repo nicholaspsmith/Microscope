@@ -43,7 +43,7 @@ Template.postEdit.events({
       Posts.remove(currentPostId, function(error) {
         Errors.throw(error.reason);
       });
-      Router.go('postsList');
+      Router.go('home');
     }
   }
 });
